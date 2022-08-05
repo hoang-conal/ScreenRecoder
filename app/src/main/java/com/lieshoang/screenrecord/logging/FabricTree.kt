@@ -15,23 +15,25 @@
  */
 package com.lieshoang.screenrecord.logging
 
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import timber.log.Timber
 
 /** @author Aidan Follestad (@afollestad) */
 class FabricTree : Timber.Tree() {
 
-  override fun log(
-    priority: Int,
-    tag: String?,
-    message: String,
-    t: Throwable?
-  ) {
-    if (t != null) {
-      Crashlytics.setString("crash_tag", tag)
-      Crashlytics.logException(t)
-    } else {
-      Crashlytics.log(priority, tag, message)
+    override fun log(
+        priority: Int,
+        tag: String?,
+        message: String,
+        t: Throwable?
+    ) {
+        if (t != null) {
+            FirebaseCrashlytics.getInstance().recordException(t)
+        } else {
+            Firebase.crashlytics.log(message)
+        }
     }
-  }
 }

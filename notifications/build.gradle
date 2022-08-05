@@ -8,8 +8,6 @@ android {
   defaultConfig {
     minSdkVersion versions.minSdk
     targetSdkVersion versions.compileSdk
-    versionCode versions.publishVersionCode
-    versionName versions.publishVersion
   }
 
   //testOptions {

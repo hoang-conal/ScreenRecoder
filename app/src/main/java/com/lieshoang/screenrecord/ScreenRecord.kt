@@ -27,8 +27,6 @@ import com.lieshoang.screenrecord.engine.engineModule
 import com.lieshoang.screenrecord.logging.FabricTree
 import com.lieshoang.screenrecord.notifications.Notifications
 import com.lieshoang.screenrecord.notifications.notificationsModule
-import com.crashlytics.android.Crashlytics
-import io.fabric.sdk.android.Fabric
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -47,7 +45,6 @@ class ScreenRecord : Application() {
         }
 
         Timber.plant(FabricTree())
-        Fabric.with(this, Crashlytics())
 
         startKoin {
             androidLogger()
