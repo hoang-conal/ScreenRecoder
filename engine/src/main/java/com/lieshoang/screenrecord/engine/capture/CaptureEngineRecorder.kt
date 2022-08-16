@@ -72,7 +72,7 @@ internal fun RealCaptureEngine.createAndPrepareRecorder(context: Context): Boole
 
     val outputFolder = File(recordingsFolderPref.get()).apply { mkdirs() }
     val now = Date().timestampString()
-    val outputFile = File(outputFolder, "MNML-$now.mp4")
+    val outputFile = File(outputFolder, "Recorder-$now.mp4")
     pendingFile = outputFile
     setOutputFile(outputFile.absolutePath)
     log("Recording to $outputFile")

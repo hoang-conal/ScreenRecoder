@@ -83,7 +83,7 @@ class SettingsQualityFragment : BaseSettingsFragment() {
     val resolutionEntry = findPreference("resolution")
     resolutionEntry.isEnabled = false
     resolutionEntry.summary =
-        "Android makes getting this to work hard. Disabled for now. https://github.com/afollestad/mnml"
+        "Android makes getting this to work hard. Disabled for now."
 
     /*
     resolutionEntry.setOnPreferenceClickListener {

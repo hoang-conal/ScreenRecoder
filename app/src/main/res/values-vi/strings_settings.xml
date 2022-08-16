@@ -1,0 +1,78 @@
+<resources xmlns:ns0="http://schemas.android.com/tools">
+
+    <string name="setting_category_ui">Giao diện người dùng</string>
+    <string name="setting_category_ui_desc">Sửa đổi chủ đề giao diện người dùng của ứng dụng.</string>
+
+    <string name="setting_dark_mode">Chế độ tối</string>
+    <string name="setting_dark_mode_on">Chế độ tối được bật.</string>
+    <string name="setting_dark_mode_off">Chế độ tối bị tắt.</string>
+
+    <string name="setting_dark_mode_automatic">Chế độ tối tự động</string>
+    <string name="setting_dark_mode_automatic_on">Chế độ tối tự bật và tắt dựa trên thời gian trong ngày.</string>
+    <string name="setting_dark_mode_automatic_off">Chế độ tối chỉ được bật khi bạn bật và vẫn bật cho đến khi bạn tắt.</string>
+
+    <string name="setting_dark_mode_automatic_start">Bắt đầu chế độ tối</string>
+    <string name="setting_dark_mode_automatic_start_desc">Chế độ tối tự bật ở %1$s.</string>
+    <string name="setting_dark_mode_automatic_end">Chế độ tối kết thúc</string>
+    <string name="setting_dark_mode_automatic_end_desc">Chế độ tối sẽ tự tắt ở %1$s.</string>
+
+
+    <string name="setting_category_quality_desc">Sửa đổi chất lượng âm thanh và video chẳng hạn như tốc độ khung hình và tốc độ bit.</string>
+
+    <string name="setting_bitrate">Tốc độ bit video</string>
+    <string name="setting_bitrate_desc">Chụp màn hình sẽ ghi ở %1$s</string>
+
+    <string name="setting_audio_bitrate">Tốc độ âm thanh</string>
+    <string name="setting_audio_bitrate_desc">Ghi âm sẽ ghi ở %1$s</string>
+
+    <string name="setting_framerate">Tỷ lệ khung hình</string>
+    <string name="setting_framerate_desc" ns0:ignore="PluralsCandidate">Chụp màn hình sẽ ghi ở %1$d khung hình mỗi giây.</string>
+
+    <string name="setting_resolution">Nghị quyết</string>
+    <string name="setting_resolution_desc">Độ phân giải ghi được đặt thành %1$dx %2$d.</string>
+    <string name="setting_resolution_current_screen">Độ phân giải ghi sẽ phù hợp với độ phân giải màn hình của bạn</string>
+    <string name="use_screen_resolution">Sử dụng độ phân giải màn hình</string>
+
+
+    <string name="setting_category_recording">Ghi Màn Hình</string>
+    <string name="setting_category_recording_desc">Sửa đổi hành vi ghi, chẳng hạn như đếm ngược bắt đầu, thư mục đầu ra, v.v.</string>
+
+    <string name="setting_countdown">Đếm ngược</string>
+    <string name="setting_countdown_disabled">Quá trình ghi sẽ bắt đầu ngay lập tức.</string>
+
+    <string name="setting_countdown_zero_note">Khi được đặt thành 0, bộ đếm ngược sẽ bị tắt.</string>
+
+    <string name="setting_record_audio">Ghi âm</string>
+    <string name="setting_record_audio_on">Âm thanh sẽ được ghi lại từ micrô của bạn trong khi chụp. Google không cho phép các ứng dụng ghi lại âm thanh nội bộ.</string>
+    <string name="setting_record_audio_off">Âm thanh sẽ không được ghi lại trong quá trình chụp. Lưu ý rằng Google không cho phép ghi âm thanh nội bộ, chỉ từ micrô của bạn.</string>
+    <string name="setting_record_audio_no_mic">Thiết bị của bạn không có micrô và không thể ghi âm thanh.</string>
+
+    <string name="setting_recordings_folder">Thư mục ghi màn hình</string>
+    <string name="setting_recordings_folder_desc">Bản ghi được lưu vào \" %1$s \"</string>
+
+    <string name="setting_show_touches">Hiển thị vòi</string>
+    <string name="setting_show_touches_desc">Screen Recorder nhắm mục tiêu đến các phiên bản Android mới nhất, điều này hạn chế quyền truy cập vào cài đặt.
+        Bạn có thể kích hoạt nó theo cách thủ công từ cài đặt trên điện thoại của bạn.</string>
+    <string name="settings_show_touches_dev_options">Chế độ nhà phát triển cần thiết</string>
+    <string name="settings_show_touches_dev_options_desc">Bạn phải đặt điện thoại của mình ở chế độ nhà phát triển để Screen Recorder có thể hiển thị cho bạn các tùy chọn của nhà phát triển.
+        Tùy chọn nhà phát triển cho phép bạn bật \'Hiển thị vòi \' theo cách thủ công.</string>
+    <string name="settings_show_touches_dev_options_how">Hãy chỉ cho tôi cách</string>
+
+
+    <string name="setting_category_controls_desc">Sửa đổi các điều khiển ghi âm, chẳng hạn như dừng khi rung, dừng khi tắt màn hình, v.v.</string>
+
+    <string name="setting_stop_on_screen_off">Dừng ở chế độ Tắt màn hình</string>
+    <string name="setting_stop_on_screen_off_desc_on">Khi màn hình của bạn tắt, mọi hoạt động ghi màn hình sẽ dừng lại.</string>
+    <string name="setting_stop_on_screen_off_desc_off">Khi màn hình của bạn tắt, sẽ không có gì đặc biệt xảy ra.</string>
+
+    <string name="setting_stop_on_shake">Dừng lại khi lắc</string>
+    <string name="setting_stop_on_shake_on">Việc lắc thiết bị của bạn sẽ dừng mọi hoạt động ghi màn hình đang hoạt động.</string>
+    <string name="setting_stop_on_shake_off">Lắc thiết bị của bạn sẽ không làm bất cứ điều gì đặc biệt.</string>
+
+    <string name="setting_always_show_controls">Luôn hiển thị các điều khiển</string>
+    <string name="setting_always_show_controls_on">Các điều khiển chẳng hạn như thông báo</string>
+    <string name="setting_always_show_controls_off">Các điều khiển chỉ được hiển thị khi quá trình chụp đang diễn ra.</string>
+
+
+    <string name="select">Lựa chọn</string>
+</resources>

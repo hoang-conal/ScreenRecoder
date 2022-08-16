@@ -56,7 +56,7 @@ internal fun RealCaptureEngine.createVirtualDisplay(context: Context): VirtualDi
   val height = recordingInfo.height
   log("Virtual display dimensions: $width x $height")
   return projection?.createVirtualDisplay(
-      "MNMLCaptureEngine",
+      "RecorderCaptureEngine",
       width,
       height,
       recordingInfo.density,

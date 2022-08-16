@@ -70,7 +70,7 @@ internal fun SettingsRecordingFragment.showOutputFolderSelector(title: String) {
   var initialFolder = File(recordingsFolderPref.get())
   if (!initialFolder.canWrite()) {
     val dcim = getExternalStoragePublicDirectory(DIRECTORY_DCIM)
-    initialFolder = File(dcim, "MNML Recordings")
+    initialFolder = File(dcim, "Recorder Recordings")
   }
   initialFolder.mkdirs()
 

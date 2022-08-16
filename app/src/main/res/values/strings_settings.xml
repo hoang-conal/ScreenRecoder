@@ -63,12 +63,12 @@
 
   <string name="setting_show_touches">Show Taps</string>
   <string name="setting_show_touches_desc">
-    MNML targets the latest versions of Android, which restricts access to this
+    Screen Recorder targets the latest versions of Android, which restricts access to this
     setting. You can manually enable it from your phone\'s settings.
   </string>
   <string name="settings_show_touches_dev_options">Developer Mode Needed</string>
   <string name="settings_show_touches_dev_options_desc">
-    You must put your phone into developer mode so that MNML can show you developer options.
+    You must put your phone into developer mode so that Screen Recorder can show you developer options.
     Developer options allow you to enable \'Show Taps\' manually.
   </string>
   <string name="settings_show_touches_dev_options_how">Show Me How</string>

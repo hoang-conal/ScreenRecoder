@@ -1,8 +1,8 @@
 <resources>
 
-  <string name="app_name" translatable="false">Z Screen Recorder</string>
+  <string name="app_name" translatable="false">ZScreen Recorder</string>
   <string name="app_name_short" translatable="false">Screen Recorder</string>
-  <string name="app_name_short_withNumber" translatable="false">Z Recorder (%1$d)</string>
+  <string name="app_name_short_withNumber" translatable="false">ZRecorder (%1$d)</string>
 
   <string name="recordings_empty_text">You have no recordings, yet…</string>
 

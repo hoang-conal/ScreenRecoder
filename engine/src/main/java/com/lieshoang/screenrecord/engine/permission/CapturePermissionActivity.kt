@@ -48,7 +48,7 @@ class CapturePermissionActivity : AppCompatActivity() {
     when {
       requestCode != PROJECTION_REQUEST -> return
       resultCode != RESULT_OK -> {
-        toast("Screen cast permission was denied to MNML!")
+        toast("Screen cast permission was denied to Recorder!")
         captureEngine.cancel()
         sendBroadcast(Intent(PERMISSION_DENIED))
       }

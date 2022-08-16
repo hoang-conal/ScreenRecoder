@@ -15,9 +15,9 @@
     <item name="android:statusBarColor">@color/colorPrimary_lightTheme</item>
 
     <item name="md_corner_radius">16dp</item>
-    <item name="md_font_title">@font/lato_bold</item>
-    <item name="md_font_body">@font/lato</item>
-    <item name="md_font_button">@font/lato_bold</item>
+    <item name="md_font_title">@font/sailec_bold</item>
+    <item name="md_font_body">@font/sailec_regular</item>
+    <item name="md_font_button">@font/sailec_bold</item>
     <item name="md_color_button_text">?colorAccent</item>
   </style>
 
@@ -36,9 +36,9 @@
     <item name="android:statusBarColor">@color/colorPrimary_darkTheme</item>
 
     <item name="md_corner_radius">16dp</item>
-    <item name="md_font_title">@font/lato_bold</item>
-    <item name="md_font_body">@font/lato</item>
-    <item name="md_font_button">@font/lato_bold</item>
+    <item name="md_font_title">@font/sailec_bold</item>
+    <item name="md_font_body">@font/sailec_regular</item>
+    <item name="md_font_button">@font/sailec_bold</item>
     <item name="md_color_button_text">?colorAccent</item>
   </style>
 

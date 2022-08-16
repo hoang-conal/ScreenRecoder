@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name" translatable="false">Trình ghi màn hình</string>
+    <string name="app_name_short" translatable="false">Trình ghi màn hình</string>
+    <string name="app_name_short_withNumber" translatable="false">Z Recorder (%1$d)</string>
+
+    <string name="recordings_empty_text">Bạn chưa có bản ghi nào…</string>
+
+    <string name="settings">Cài đặt</string>
+
+    <string name="install_video_viewer">Vui lòng cài đặt ứng dụng xem video, chẳng hạn như Google Photos.</string>
+    <string name="install_web_browser">Vui lòng cài đặt một ứng dụng trình duyệt web, chẳng hạn như Google Chrome.</string>
+
+</resources>

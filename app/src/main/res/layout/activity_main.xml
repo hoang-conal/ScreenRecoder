@@ -79,7 +79,5 @@
                 ads:adSize="BANNER"
                 ads:adUnitId="ca-app-pub-3740025778941551/8512871417" />
         </LinearLayout>
-
     </FrameLayout>
-
 </LinearLayout>

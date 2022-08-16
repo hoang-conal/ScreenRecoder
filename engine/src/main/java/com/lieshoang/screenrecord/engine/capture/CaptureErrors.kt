@@ -17,20 +17,20 @@ package com.lieshoang.screenrecord.engine.capture
 
 class FileSystemException(base: Exception) :
     Exception(
-        "MNML was unable to access your file system. You may need to change your " +
-            "recording folder in MNML's settings. ${base.displayMessage()}",
+        "Recorder was unable to access your file system. You may need to change your " +
+            "recording folder in Recorder's settings. ${base.displayMessage()}",
         base
     )
 
 class PrepareFailedException(base: Throwable) :
     Exception(
-        "MNML was unable to prepare for recording. ${base.displayMessage()}",
+        "Recorder was unable to prepare for recording. ${base.displayMessage()}",
         base
     )
 
 class StartRecordingException(base: Exception) :
     Exception(
-        "MNML was unable to begin recording. ${base.displayMessage()}",
+        "Recorder was unable to begin recording. ${base.displayMessage()}",
         base
     )
 
