@@ -5,6 +5,13 @@
       <map>
         <entry key="..\:/ScreenRecoder/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ScreenRecoder/app/src/main/res/layout/include_appbar.xml" value="0.35052083333333334" />
+        <entry key="..\:/ScreenRecoder/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.183" />
+        <entry key="..\:/ScreenRecoder/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.182" />
+        <entry key="..\:/ScreenRecoder/notifications/src/main/res/drawable/ic_close_32dp.xml" value="0.1745" />
+        <entry key="..\:/ScreenRecoder/notifications/src/main/res/drawable/ic_record_32dp.xml" value="0.1745" />
+        <entry key="..\:/ScreenRecoder/theming/src/main/res/font/lato.xml" value="0.19583333333333333" />
+        <entry key="..\:/ScreenRecoder/theming/src/main/res/font/lato_bold.xml" value="0.19583333333333333" />
+        <entry key="..\:/ScreenRecoder/theming/src/main/res/font/lato_light.xml" value="0.19583333333333333" />
       </map>
     </option>
   </component>
