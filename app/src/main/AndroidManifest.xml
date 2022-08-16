@@ -62,6 +62,13 @@
         android:name="com.google.android.gms.ads.APPLICATION_ID"
         android:value="ca-app-pub-3740025778941551~3099896663"/>
 
+    <service
+        android:name=".engine.service.BackgroundService"
+        android:enabled="true"
+        android:foregroundServiceType="mediaProjection"/>
+
   </application>
+
+
 
 </manifest>

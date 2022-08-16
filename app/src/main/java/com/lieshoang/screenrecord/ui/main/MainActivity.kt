@@ -201,9 +201,6 @@ class MainActivity : DarkModeSwitchActivity(), OverlayExplanationCallback {
         setOnMenuItemDebouncedClickListener { item ->
             when (item.itemId) {
                 R.id.about -> AboutDialog.show(this@MainActivity)
-                R.id.provide_feedback -> urlLauncher.viewUrl(
-                    "https://github.com/afollestad/mnml/issues/new/choose"
-                )
                 R.id.settings -> startActivity<SettingsActivity>()
                 R.id.share -> shareRecording(dataSource.getSelectedItems().single())
                 R.id.delete -> {
