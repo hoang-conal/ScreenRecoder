@@ -14,7 +14,7 @@ ext.versions = [
         fabricPlugin        : '1.+',
 
         //admob
-        admob               : '21.1.0',
+        admob               : '21.0.0',
 
         // Kotlin
         kotlin              : '1.7.10',

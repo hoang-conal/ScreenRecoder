@@ -47,32 +47,39 @@
 
         </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/fab"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_marginEnd="@dimen/content_inset_more"
-            android:layout_marginBottom="@dimen/content_inset"
             android:minHeight="64dp"
-            android:paddingStart="@dimen/content_inset"
-            android:paddingTop="@dimen/content_inset_half"
-            android:paddingEnd="@dimen/content_inset"
-            android:paddingBottom="@dimen/content_inset_half"
-            android:text="@string/start_recording"
-            app:cornerRadius="32dp"
-            app:icon="@drawable/ic_record_32dp"
-            app:iconTint="#fff" />
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fab"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/content_inset_more"
+                android:layout_marginBottom="@dimen/content_inset"
+                android:paddingStart="@dimen/content_inset"
+                android:paddingTop="@dimen/content_inset_half"
+                android:paddingEnd="@dimen/content_inset"
+                android:paddingBottom="@dimen/content_inset_half"
+                android:text="@string/start_recording"
+                app:cornerRadius="32dp"
+                app:icon="@drawable/ic_record_32dp"
+                app:iconTint="#fff" />
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3740025778941551/8512871417" />
+        </LinearLayout>
 
     </FrameLayout>
-
-
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3740025778941551/8512871417" />
 
 </LinearLayout>

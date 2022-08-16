@@ -38,7 +38,6 @@ class ScreenRecord : Application() {
     override fun onCreate() {
         super.onCreate()
         FirebaseApp.initializeApp(this)
-
         startKoin {
             androidLogger()
             androidContext(this@ScreenRecord)

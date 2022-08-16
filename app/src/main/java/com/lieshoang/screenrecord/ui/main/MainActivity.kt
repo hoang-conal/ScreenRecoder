@@ -109,6 +109,7 @@ class MainActivity : DarkModeSwitchActivity(), OverlayExplanationCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        MobileAds.initialize(this)
         setupToolbar()
         setupGrid()
 
@@ -151,7 +152,8 @@ class MainActivity : DarkModeSwitchActivity(), OverlayExplanationCallback {
     }
 
     private fun setupAdmob() {
-
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 
     override fun onResume() {
