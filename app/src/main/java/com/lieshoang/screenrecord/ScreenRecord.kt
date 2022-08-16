@@ -18,33 +18,26 @@
 package com.lieshoang.screenrecord
 
 import android.app.Application
-import com.lieshoang.screenrecord.BuildConfig.DEBUG
+import com.google.android.gms.ads.MobileAds
+import com.google.firebase.FirebaseApp
 import com.lieshoang.screenrecord.common.commonModule
 import com.lieshoang.screenrecord.common.prefModule
 import com.lieshoang.screenrecord.di.mainModule
 import com.lieshoang.screenrecord.di.viewModelModule
 import com.lieshoang.screenrecord.engine.engineModule
-import com.lieshoang.screenrecord.logging.FabricTree
 import com.lieshoang.screenrecord.notifications.Notifications
 import com.lieshoang.screenrecord.notifications.notificationsModule
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
-import timber.log.Timber
-import timber.log.Timber.DebugTree
 
 /** @author Aidan Follestad (@afollestad) */
 class ScreenRecord : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        if (DEBUG) {
-            Timber.plant(DebugTree())
-        }
-
-        Timber.plant(FabricTree())
+        FirebaseApp.initializeApp(this)
 
         startKoin {
             androidLogger()

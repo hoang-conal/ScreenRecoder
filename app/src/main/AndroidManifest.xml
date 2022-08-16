@@ -47,7 +47,8 @@
     <activity
         android:name=".shortcuts.ShortcutRelayActivity"
         android:excludeFromRecents="true"
-        android:theme="@style/AppTheme.Transparent">
+        android:theme="@style/AppTheme.Transparent"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.VIEW"/>
       </intent-filter>
@@ -56,6 +57,10 @@
     <meta-data
         android:name="preloaded_fonts"
         android:resource="@array/preloaded_fonts"/>
+
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-3740025778941551~3099896663"/>
 
   </application>
 

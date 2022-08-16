@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ScreenRecoder/app/src/main/res/layout/activity_main.xml" value="0.159375" />
+        <entry key="..\:/ScreenRecoder/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/ScreenRecoder/app/src/main/res/layout/include_appbar.xml" value="0.35052083333333334" />
       </map>
     </option>
   </component>
