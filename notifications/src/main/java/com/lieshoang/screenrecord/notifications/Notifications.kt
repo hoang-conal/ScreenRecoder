@@ -20,7 +20,6 @@ import android.app.Application
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.app.PendingIntent.FLAG_CANCEL_CURRENT
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
 import android.content.Intent.ACTION_VIEW
@@ -156,13 +155,13 @@ class RealNotifications(
         app,
         MAIN_ACTIVITY_REQUEST,
         Intent(app, mainActivity).addFlags(FLAG_ACTIVITY_NEW_TASK),
-        FLAG_CANCEL_CURRENT
+        PendingIntent.FLAG_IMMUTABLE
     )
     val recordIntent = PendingIntent.getService(
         app,
         RECORD_REQUEST,
         Intent(app, backgroundService).setAction(RECORD_ACTION),
-        FLAG_CANCEL_CURRENT
+        PendingIntent.FLAG_IMMUTABLE
     )
 
     val remoteViews = RemoteViews(
@@ -214,7 +213,7 @@ class RealNotifications(
         Intent(ACTION_VIEW).apply {
           setDataAndType(recording.toUri(), "video/*")
         },
-        FLAG_CANCEL_CURRENT
+        PendingIntent.FLAG_IMMUTABLE
     )
     val shareUri = recording.toUri()
     val sharePendingIntent = PendingIntent.getActivity(
@@ -224,7 +223,7 @@ class RealNotifications(
           setDataAndType(shareUri, "video/*")
           putExtra(EXTRA_STREAM, shareUri)
         },
-        FLAG_CANCEL_CURRENT
+        PendingIntent.FLAG_IMMUTABLE
     )
     val deletePendingIntent = PendingIntent.getService(
         app,
@@ -233,7 +232,7 @@ class RealNotifications(
           action = DELETE_ACTION
           putExtra(EXTRA_RECORDING, recording)
         },
-        FLAG_CANCEL_CURRENT
+        PendingIntent.FLAG_IMMUTABLE
     )
 
     val notification = NotificationCompat.Builder(app, channel)
@@ -290,6 +289,6 @@ class RealNotifications(
       app,
       code,
       Intent(action),
-      FLAG_CANCEL_CURRENT
+      PendingIntent.FLAG_IMMUTABLE
   )
 }

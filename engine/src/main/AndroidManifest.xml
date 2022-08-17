@@ -14,7 +14,8 @@
         android:name=".quicksetting.QuickSettingService"
         android:icon="@drawable/ic_quick_setting_record"
         android:label="@string/quick_setting_name"
-        android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+        android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+        android:exported="true">
       <intent-filter>
         <action
             android:name="android.service.quicksettings.action.QS_TILE"/>
