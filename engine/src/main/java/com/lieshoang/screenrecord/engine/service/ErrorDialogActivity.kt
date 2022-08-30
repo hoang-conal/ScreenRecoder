@@ -25,6 +25,7 @@ import androidx.fragment.app.FragmentActivity
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.callbacks.onCancel
 import com.afollestad.materialdialogs.callbacks.onDismiss
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 import com.lieshoang.screenrecord.common.misc.startActivity
@@ -69,17 +70,11 @@ class ErrorDialog : DialogFragment() {
 /** @author Aidan Follestad (@afollestad) */
 class ErrorDialogActivity : AppCompatActivity() {
   companion object {
-    fun show(
-      context: Context,
-      error: java.lang.Exception
-    ) {
-//      Crashlytics.log("Showing ErrorDialogActivity for $error")
-      if (error !is FileSystemException) {
-//        Crashlytics.logException(error)
-      }
+    fun show(context: Context, e: Exception) {
+      FirebaseCrashlytics.getInstance().recordException(e)
       context.startActivity<ErrorDialogActivity>(
           flags = FLAG_ACTIVITY_NEW_TASK,
-          extras = Bundle().apply { putSerializable(KEY_ERROR, error) }
+          extras = Bundle().apply { putSerializable(KEY_ERROR, e) }
       )
     }
   }
