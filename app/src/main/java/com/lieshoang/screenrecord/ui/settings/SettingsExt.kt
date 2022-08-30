@@ -15,6 +15,7 @@
  */
 package com.lieshoang.screenrecord.ui.settings
 
+import android.os.Environment
 import android.os.Environment.DIRECTORY_DCIM
 import android.os.Environment.getExternalStoragePublicDirectory
 import androidx.fragment.app.Fragment
@@ -33,63 +34,63 @@ import kotlinx.android.synthetic.main.dialog_number_selector.view.seeker
 import java.io.File
 
 internal fun Fragment.showNumberSelector(
-  title: String,
-  max: Int,
-  current: Int,
-  onSelection: (Int) -> Unit
+    title: String,
+    max: Int,
+    current: Int,
+    onSelection: (Int) -> Unit
 ) {
-  val context = activity ?: throw IllegalStateException("Oh no!")
-  val dialog = MaterialDialog(context).show {
-    title(text = title)
-    message(R.string.setting_countdown_zero_note)
-    customView(R.layout.dialog_number_selector)
-    positiveButton(android.R.string.ok) {
-      val seekBar = getCustomView()?.seeker ?: return@positiveButton
-      onSelection(seekBar.progress)
+    val context = activity ?: throw IllegalStateException("Oh no!")
+    val dialog = MaterialDialog(context).show {
+        title(text = title)
+        message(R.string.setting_countdown_zero_note)
+        customView(R.layout.dialog_number_selector)
+        positiveButton(android.R.string.ok) {
+            val seekBar = getCustomView()?.seeker ?: return@positiveButton
+            onSelection(seekBar.progress)
+        }
     }
-  }
 
-  val customView = dialog.getCustomView() ?: return
-  customView.label.text = "$current"
-  customView.seeker.max = max
-  customView.seeker.progress = current
-  customView.seeker.onProgressChanged {
-    customView.label.text = "$it"
-  }
+    val customView = dialog.getCustomView() ?: return
+    customView.label.text = "$current"
+    customView.seeker.max = max
+    customView.seeker.progress = current
+    customView.seeker.onProgressChanged {
+        customView.label.text = "$it"
+    }
 }
 
 internal fun SettingsRecordingFragment.showOutputFolderSelector(title: String) {
-  if (!isAllGranted(WRITE_EXTERNAL_STORAGE)) {
-    runWithPermissions(WRITE_EXTERNAL_STORAGE) {
-      showOutputFolderSelector(title)
+    if (!isAllGranted(WRITE_EXTERNAL_STORAGE)) {
+        runWithPermissions(WRITE_EXTERNAL_STORAGE) {
+            showOutputFolderSelector(title)
+        }
+        return
     }
-    return
-  }
 
-  val context = activity ?: return
-  var initialFolder = File(recordingsFolderPref.get())
-  if (!initialFolder.canWrite()) {
-    val dcim = getExternalStoragePublicDirectory(DIRECTORY_DCIM)
-    initialFolder = File(dcim, "Recorder Recordings")
-  }
-  initialFolder.mkdirs()
-
-  MaterialDialog(context).show {
-    title(text = title)
-    folderChooser(
-        allowFolderCreation = true,
-        initialDirectory = initialFolder
-    ) { _, folder ->
-      recordingsFolderPref.set(folder.absolutePath)
+    val context = activity ?: return
+    var initialFolder = File(recordingsFolderPref.get())
+    if (!initialFolder.canWrite()) {
+        val dcim = getExternalStoragePublicDirectory(DIRECTORY_DCIM).absolutePath
+        initialFolder = File(dcim, "Recorder Recordings")
     }
-    positiveButton(R.string.select)
-  }
+    initialFolder.mkdirs()
+
+    MaterialDialog(context).show {
+        title(text = title)
+        folderChooser(
+            allowFolderCreation = true,
+            initialDirectory = initialFolder
+        ) { _, folder ->
+            recordingsFolderPref.set(folder.absolutePath)
+        }
+        positiveButton(R.string.select)
+    }
 }
 
 internal fun Int.bitRateString(): String {
-  return if (this >= 1_000_000) {
-    "${this / 1_000_000}mbps"
-  } else {
-    "${this / 1_000}kbps"
-  }
+    return if (this >= 1_000_000) {
+        "${this / 1_000_000}mbps"
+    } else {
+        "${this / 1_000}kbps"
+    }
 }
